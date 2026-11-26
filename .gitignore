@@ -1,0 +1,94 @@
+# ================================================================
+# Project repository ignore list
+# Place this file at the top level of your repository.
+# The filename is  .gitignore  with a leading dot and no extension.
+#
+# READ THIS FIRST
+# Calculation INPUT and OUTPUT files are required evidence for the
+# electronic-structure standard. They are committed, not ignored.
+# Nothing below excludes .inp, .log, .out, or .dat. Do not add them.
+#
+# This list ignores scratch, environments, clutter, and secrets.
+# A .gitignore does not untrack a file that is already tracked.
+# ================================================================
+
+# ---- Calculation scratch ---------------------------------------
+# GAMESS Fortran unit files and restart artefacts
+*.F0[0-9]
+*.F[1-9][0-9]
+*.trj
+*.rst
+*.irc
+*.efp
+*.civ
+# generic scratch
+*.tmp
+*.scr
+scratch/
+tmp/
+
+# Other electronic-structure codes, if you use them
+*.gbw
+*.densities
+*.densitiesinfo
+*.cis
+*.prop
+*.ges
+*.engrad
+
+# ---- Python ----------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# ---- Environments ----------------------------------------------
+# Never commit an environment. Record package versions in the README.
+.venv/
+venv/
+env/
+envs/
+
+# ---- Editors and IDEs ------------------------------------------
+.vscode/
+.idea/
+*.swp
+*~
+
+# ---- Operating system clutter ----------------------------------
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+desktop.ini
+
+# ---- Secrets: never commit -------------------------------------
+.env
+*.pem
+*.key
+credentials*
+token*
+
+# ---- Large binaries --------------------------------------------
+# GitHub warns above 50 MB and blocks above 100 MB per file.
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.iso
+*.mp4
+*.mov
+
+# ---- LaTeX by-products (keep the .tex, not these) --------------
+*.aux
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.toc
+*.nav
+*.snm
+*.vrb
